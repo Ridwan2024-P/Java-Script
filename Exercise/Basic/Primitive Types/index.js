@@ -6,3 +6,7 @@ let selectedColor = null
 
 
 // using console typeof thn show data type
+
+
+//Primitive --> String,Number,Boolen,Undefined,null
+//Reference Type -->
