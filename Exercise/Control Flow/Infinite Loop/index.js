@@ -10,3 +10,7 @@ const color = ['black','blue',  'red ']
     for(let i in color){
         console.log(i,color[i]);
     }
+
+
+    for(let colors of color)
+        console.log(colors)
