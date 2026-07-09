@@ -1,18 +1,12 @@
-let i = 0;
-while(i<5){
-    console.log(i);
-    // i++;
+
+const person ={
+    name:'rid',
+    age:20
 }
-
-while (true){
-
-}
-
-let x = 0;
-do{
-    //x++;
-}while(x<5);
-
-for(let i=0 ;i>0;i++){
-
-}
+for(let key in person)
+    console.log(key ,person[key]);
+ 
+const color = ['black','blue',  'red ']
+    for(let i in color){
+        console.log(i,color[i]);
+    }
