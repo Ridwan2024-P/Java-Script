@@ -14,3 +14,11 @@ console.log(array.includes(1));
 // Removing Array
 console.log(array.pop());
 numbers.splice(2,2);
+
+
+const message = 'This is my first message';
+const parts = message.split(' ');
+console.log(parts);
+
+const combined = parts.join('-');
+console.log(combined)
