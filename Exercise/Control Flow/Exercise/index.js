@@ -1,4 +1,5 @@
 
+
 function isLandscape(width,hight){
 return width>hight;
 }
@@ -33,3 +34,15 @@ function showNumber(limit){
 
 }
 showNumber(20);
+
+const array = [0,1,null,'',2,5];
+
+console.log(countTruth(array));
+function countTruth(array){
+    let count = 0;
+    for (let value of array){
+        if (value)
+            count++;
+    }
+    return count;
+}
