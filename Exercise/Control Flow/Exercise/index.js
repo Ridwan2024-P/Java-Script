@@ -21,3 +21,15 @@ function checkSpeed (speed){
     }
 }
 checkSpeed(1300);
+
+
+
+
+function showNumber(limit){
+    for(let i = 0; i<= limit; i++){
+        if(i %2 ===0) console.log(i,'Even');
+        else console.log('ODD');
+    }
+
+}
+showNumber(20);
