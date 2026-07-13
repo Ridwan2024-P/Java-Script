@@ -1,0 +1,21 @@
+<html>
+<head>
+   <style>
+      #test {
+         font-size: 15px;
+      }
+   </style>
+</head>
+<body>
+   <h2> Hover over the below text to customize the font. </h2>
+   <div id = "test" onmouseenter = "changeFontSize(); changeColor();"> Hello World! </div> <br>
+   <script>
+      function changeFontSize(event) {
+         document.getElementById("test").style.fontSize = "25px";
+      }
+      function changeColor(event) {
+         document.getElementById("test").style.color = "red";
+      }
+   </script>
+</body>
+</html>
