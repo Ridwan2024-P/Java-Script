@@ -31,9 +31,21 @@
                 const num = numbers.filter(user => user>5);
                 console.log(num)
                 const nums = numbers.filter((item, index, array) => { 
-    return array.indexOf(item) === index; 
+                return array.indexOf(item) === index; 
                 })
-                console.log(nums)
+                console.log(nums);
+
+                const numb = [1,2,3,4];
+                const total = numb.reduce((sum,num) =>{return sum + num},10);
+                console.log(total);
+                console.log(Math.max(...numb));
+                console.log(Math.min(...numb));
+               const letter = ['a','b','a','a','a','a','a'];
+               const fintletter = letter.reduce((acc,fru)=>{
+                   acc[fru] = (acc[fru] || 0) + 1;
+                   return acc;
+               },{})
+               console.log(fintletter);
 
     </script>
 
