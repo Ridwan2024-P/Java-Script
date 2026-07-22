@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <SCRipt>
+        const number = [5,10,20,22,25,20];
+        const number20 = number.filter((user => user > 20));
+        console.log(number20);
+        
+      
+                const cart = [
+                    {name:"Laptop", price:50000},
+                    {name:"Mouse", price:1000},
+                    {name:"Keyboard", price:2000}
+                ];
+                const price = cart.reduce((sum,num)=>{return sum+num.price;},0);
+                console.log(price)
+
+                const dublicate = number.filter((item,index,array)=>{
+                    return array.indexOf(item) === index;
+                })
+                console.log(dublicate)
+
+    </SCRipt>
+    <script>
+        const products = [
+ {name:"iPhone", category:"mobile"},
+ {name:"Samsung", category:"mobile"},
+ {name:"Dell", category:"laptop"},
+ {name:"HP", category:"laptop"}
+];
+      const cat = products.filter((u=>u.category==="mobile"));
+      console.log(...cat);
+    </script>
+</body>
+</html>
