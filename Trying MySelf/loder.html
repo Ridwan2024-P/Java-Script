@@ -6,6 +6,36 @@
     <title>Document</title>
 </head>
 <body>
-    
+     
+    <script>
+
+            const users = [
+            {id:1,name:"Ahsan Rid", email:"ahsanrid@gmail.com"},
+            {id:2, name : "Prapti" , email : "prapti@gmail.com"},
+            {id : 3, name : "abul" ,email : "abul@gmail.com"}];
+
+                const email = users.map(user => user.email);
+                console.log(email);
+                const name = users.map(user => user.name);
+                console.log(name);
+                const id = users.map(user=>user.id);
+                console.log(id);
+
+                const find = users.find(user => user.id === 1);
+                console.log(find);
+
+                const last = users.findIndex(user => user.users>1);
+                console.log(last);
+            
+                const numbers = [1,2,3,4,5,6,7,8,9,9];
+                const num = numbers.filter(user => user>5);
+                console.log(num)
+                const nums = numbers.filter((item, index, array) => { 
+    return array.indexOf(item) === index; 
+                })
+                console.log(nums)
+
+    </script>
+
 </body>
 </html>
