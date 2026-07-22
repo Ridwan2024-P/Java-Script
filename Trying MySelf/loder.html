@@ -9,6 +9,8 @@
      
     <script>
 
+        <!-- Map Find Filter Reduce -->
+
             const users = [
             {id:1,name:"Ahsan Rid", email:"ahsanrid@gmail.com"},
             {id:2, name : "Prapti" , email : "prapti@gmail.com"},
@@ -46,6 +48,51 @@
                    return acc;
                },{})
                console.log(fintletter);
+
+    </script>
+    <script>
+        <!-- Rest & Speed Operator -->
+        const arr = [1,2,3,4,5,6];
+        console.log(...arr);
+        const arr2 = [...arr];
+        console.log(arr2);
+        const arr3 = [7,8,9,10,11,12,13,14];
+        console.log(...arr,...arr3);
+
+        const arr4 = [1,5,6,];
+         function sum(a,b,c){
+                return a+b+c;
+        }
+        console.log(sum(...arr4));
+
+        const user = {
+            name : "rid",
+            age : 20
+        };
+        const update = {
+            ...user,
+            age : 25
+        };
+        console.log(update);
+
+        const student = {
+            name : "rid",
+            id    : 101,
+            address : {
+                city : "dhaka",
+            }
+        };
+        // const copy = {...student};
+         //copy.address.city = "rangpur";
+        // console.log(student);
+        // console.log(copy)
+
+         const copy2 = structuredClone(student);
+         copy2.address.city = "khulna";
+         console.log(student);
+         console.log(copy2)
+
+         
 
     </script>
 
