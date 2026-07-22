@@ -95,6 +95,60 @@
          
 
     </script>
+    <script>
+        //arrow fuction
+        const add = (a,b) => {
+            return a + b;
+        };
+        console.log(add(1,2));
+
+        function abb (a,b,c){
+            const result = a + b;
+            c(result);
+        }
+        //callback function
+        function great(name){
+            console.log("rid" + name);
+        }
+        function pre (call){
+            call("prapti");
+        }
+         pre(great);
+         //Recursive Function
+         function count(n){
+            if(n===0)return n;
+            console.log(n);
+            count(n-1);
+         }
+         count(5);
+
+    </script>
+    <script>
+        class rid {
+            constructor(name,id){
+                this.name = name;
+                this.id = id;
+            }
+             greatt(){
+                console.log("name :" , name );
+                console.log("Id :" ,id);
+             }
+        }
+         const r = new rid("rid",1);
+         r.greatt();
+;
+    </script>
+    <script>
+        //settime Out
+        console.log("start");
+       // for(let i  =  0; i <1000000000000000000000000000000000000000000000; i++){
+
+       // }
+       setTimeout(() => {
+        console.log("rid");
+       },1000)
+        console.log("End");
+    </script>
 
 </body>
 </html>
