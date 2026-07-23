@@ -96,6 +96,18 @@ for(let j = 0; j<arr2.length-1;j++){
  console.log(sum);
 
 
+const arr = [3,5,2,6,1,7,4,8 ,3 ,9];
+let sum = 0;
+let prev = null;
+for (let i = 0; i < arr.length; i++) {
+   if (i === arr.length-1 || arr[i] > arr[i + 1]) {
+        if (prev !== null) {
+            sum += arr[i]-prev;
+        }
+        prev = arr[i];
+    }
+}
+console.log(sum);
 
 
 
