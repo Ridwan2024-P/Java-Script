@@ -59,5 +59,50 @@
 
     </script>
 
+    <script> const arr = [-5,4,0,-2,7,8,0,-1];
+ let count = 0;
+ let neg = 0;
+ let zero =0;
+ for(let i = 0; i<arr.length;i++){
+     if(0<arr[i]){
+        count++;
+     }
+     if(arr[i] > 0){
+         neg++;
+     }
+     if(arr[i] === 0){
+         zero++;
+     }
+ }
+ console.log("positive Number : ", count);
+ console.log("Negative :",neg);
+ console.log("Zero : ",zero);
+
+ //trying
+ const arr = [3, 5, 2, 6, 1, 7, 4, 8, 3, 5];
+const arr2 = []
+let sum = 0;
+ for(let i = 0; i<arr.length;i++){
+   if(arr[i+1]<arr[i]){
+       arr2.push(arr[i]);
+   }
+ }
+if (arr[arr2.length - 1] < arr[arr.length - 1]) { 
+    arr2.push(arr[arr.length - 1]); 
+} 
+for(let j = 0; j<arr2.length-1;j++){
+    sum += arr2[j+1] - arr2[j];
+}
+ console.log(sum);
+
+
+
+
+
+
+
+
+</script>
+
 </body>
 </html>
