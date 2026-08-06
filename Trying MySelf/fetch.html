@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="data" id="data"></div>
+    <script>
+        const dataA = document.getElementById('data');
+        let dataArray = [];
+        function newQuote() {
+    const quote = dataArray[Math.floor(Math.random() * dataArray.length)];
+      dataA.textContent = quote.quote;
+
+        }
+        async function getData(){
+            const apiUrl = 'https://dummyjson.com/quotes';
+            try{
+                const response = await fetch(apiUrl);
+                const dataa = await response.json();
+                dataArray = dataa.quotes;
+                newQuote();
+                
+                
+                
+            }
+            catch{
+
+            }
+        }getData();
+        
+    </script>
+</body>
+</html>
