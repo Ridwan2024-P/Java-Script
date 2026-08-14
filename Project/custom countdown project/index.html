@@ -14,7 +14,7 @@
     <video src="time.mp4" class="video-background " loop muted autoplay></video>
     <div class="video-overlay"></div>
     <div class="container">
-        <div class="input-container" id="input-container">
+        <div class="input-container" id="input-container" hidden>
             <h1>Create a Custom Countdown</h1>
             <form action="" class="form" id="countdownForm">
                 <label for="tittle">Tittle</label>
@@ -25,6 +25,23 @@
 
             </form>
         </div>
+        <!-- CountDown -->
+         <div class="countdown" id="coumtdown" hidden>
+            <h1 id="countdown-tittle">CountDown Tittle Here</h1>
+            <ul>
+                <li><span>3</span>Days</li>
+                <li><span>6</span>Hours</li>
+                <li><span>45</span>Minutes</li>
+                <li><span>52</span>Seconds</li>
+            </ul>
+            <button id="countdown-button">Reset</button>
+         </div>
+         <!-- Complate -->
+          <div class="complete" id="complete">
+            <h1 class="complete-tittle">Countdown Complete!</h1>
+            <h1 id="complete-info">Countdown Finished on 05-05-2020</h1>
+            <button id="complete-button">New Countdown</button>
+          </div>
     </div>
     <!-- Script -->
     <script src="script.js"></script>
