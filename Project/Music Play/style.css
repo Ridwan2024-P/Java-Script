@@ -91,9 +91,14 @@ h3 {
   font-size: 30px;
   color: rgb(129, 129, 129);
   margin-right: 30px;
+  cursor: pointer;
+  user-select: none;
+
 
 }
-
+.fas:hover{
+  filter: brightness(80%);
+}
 
 
 .main-button {
@@ -109,8 +114,14 @@ h3 {
 }
 
   .img-container {
-    left: 29px;
-    
+    width: 80vw;
+    height: 80vw;
+    max-width: 300px;
+    max-height: 300px;
+
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   h2 {
