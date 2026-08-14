@@ -132,7 +132,44 @@ function updateProgressBar(e) {
     }
 }
 
+function updateProgressBar(e) {
+    if (isPlaying) {
+        const { duration, currentTime } = e.srcElement;
+        // Progress bar
+        const progressPercent = (currentTime / duration) * 100;
+        progress.style.width = `${progressPercent}%`;
+        // Current time
+        const currentMinutes = Math.floor(currentTime / 60);
+        let currentSeconds = Math.floor(currentTime % 60);
+        if (currentSeconds < 10) {
+            currentSeconds = `0${currentSeconds}`;
+        }
+        currentTimeEl.textContent =
+            `${currentMinutes}:${currentSeconds}`;
+        // Total duration
+        const durationMinutes = Math.floor(duration / 60);
+        let durationSeconds = Math.floor(duration % 60);
+        if (durationSeconds < 10) {
+            durationSeconds = `0${durationSeconds}`;
+        }
+        durationEl.textContent =
+            `${durationMinutes}:${durationSeconds}`;
+    }
+}
+function setProgressBar(e) {
+    console.log(e);
+    const width = this.clientWidth;
+    console.log('width', width);
+    const clickX = e.offsetX;
+    console.log('clickX', clickX);
+    const { duration } = music;
+    console.log(clickX / width);
+    console.log((clickX / width) * duration);
+    music.currentTime = (clickX / width) * duration;
+}
+
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
 
 music.addEventListener('timeupdate', updateProgressBar);
+progressCOntainer.addEventListener('click',setProgressBar )
