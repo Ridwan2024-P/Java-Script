@@ -82,7 +82,7 @@ a:hover,a:active{
     bottom: 0;
 
 }
-.shaw-modal{
+.show-modal{
     display: flex;
     justify-content: center;
     align-items: center;
