@@ -1,6 +1,6 @@
 const video = document.querySelector('video');
 const ProgressRange = document.querySelector('.progress-range')
-const progressBar = document.querySelector('.Progress-bar');
+const progressBar = document.querySelector('.progress-bar');
 const playBtn = document.getElementById('play-btn');
 const volumeIcon = document.getElementById('volume-icon');
 const volumeRange = document.querySelector('.volume-range');
@@ -26,8 +26,9 @@ function togglePlay(){
 
 // Progress Bar ---------------------------------- //
 
-
-
+function updateProgress() {
+  progressBar.style.width = `${video.currentTime / video.duration * 100}%`;
+}
 // Volume Controls --------------------------- //
 
 
@@ -41,3 +42,5 @@ function togglePlay(){
 
 playBtn.addEventListener('click' , togglePlay);
 video.addEventListener('click',togglePlay);
+video.addEventListener('timeupdate',updateProgress);
+video.addEventListener('canplay',updateProgress);
